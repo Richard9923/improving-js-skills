@@ -9,10 +9,23 @@
       <p id="demo"></p>
     </div>
 
+    <p id="p2">Hello World!</p>
+
+    <form
+      name="myForm"
+      action="/action_page.php"
+      onsubmit="return validateForm()"
+      method="post"
+    >
+      Name: <input type="text" name="fname" />
+      <input type="submit" value="Submit" />
+    </form>
+
     <script src="app.js">
       document.getElementById("teste").innerHTML = "Hello World.";
       document.getElementById("demo").innerHTML = "Date : " + Date();
       document.write(Date());
+      
     </script>
   </body>
 </html>

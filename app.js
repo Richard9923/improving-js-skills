@@ -4,6 +4,15 @@ const titulos = (document.getElementsByClassName("titulo").innerHTML = "helou");
 const xstyke = document.querySelectorAll("p.intro");
 const teste = document.getElementsByClassName("ola");
 const testeID = document.getElementById("teste");
+const changingStyle = (document.getElementById("p2").style.color = "blue");
 
 teste.innerHTML = "TITULO";
 testeID.innerHTML = "titulo";
+
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
