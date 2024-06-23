@@ -23,17 +23,42 @@
       <input type="submit" value="Submit" />
     </form>
 
+    <p><button onclick="myMove()">Click Me</button></p>
+
     <button
+      id="click"
       type="button"
       onclick="document.getElementById('id1').style.color = 'green'"
     >
       Click me
     </button>
 
+    <h1>My first JavaScript Animation</h1>
+
+    <div id="container">
+      <div id="animation">My animation will go here</div>
+    </div>
+
     <script src="app.js">
-      document.getElementById("teste").innerHTML = "Hello World.";
-      document.getElementById("demo").innerHTML = "Date : " + Date();
-      document.write(Date());
+        document.getElementById("teste").innerHTML = "Hello World.";
+        document.getElementById("demo").innerHTML = "Date : " + Date();
+        document.write(Date());
+        function myMove() {
+        let id = null;
+        const elem = document.getElementById("animate");
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+            elem.style.left = pos + "px";
+          }
+        }
+      }
     </script>
   </body>
 </html>

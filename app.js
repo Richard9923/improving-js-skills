@@ -5,6 +5,7 @@ const xstyke = document.querySelectorAll("p.intro");
 const teste = document.getElementsByClassName("ola");
 const testeID = document.getElementById("teste");
 const change = (document.getElementById("p2").style.color = "blue");
+const button = document.getElementById("click");
 
 change.style.color = "green";
 
@@ -18,3 +19,24 @@ function validateForm() {
     return false;
   }
 }
+
+function myMove() {
+  let id = null;
+  const elem = document.getElementById(animation);
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.top = pos + "px";
+      elem.style.left = pos + "px";
+    }
+  }
+}
+
+button.addEventListener("click", {
+  myMove,
+});
