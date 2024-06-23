@@ -4,7 +4,9 @@ const titulos = (document.getElementsByClassName("titulo").innerHTML = "helou");
 const xstyke = document.querySelectorAll("p.intro");
 const teste = document.getElementsByClassName("ola");
 const testeID = document.getElementById("teste");
-const changingStyle = (document.getElementById("p2").style.color = "blue");
+const change = (document.getElementById("p2").style.color = "blue");
+
+change.style.color = "green";
 
 teste.innerHTML = "TITULO";
 testeID.innerHTML = "titulo";

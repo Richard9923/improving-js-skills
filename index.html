@@ -9,6 +9,8 @@
       <p id="demo"></p>
     </div>
 
+    <h1 id="id1">Teste</h1>
+
     <p id="p2">Hello World!</p>
 
     <form
@@ -21,11 +23,17 @@
       <input type="submit" value="Submit" />
     </form>
 
+    <button
+      type="button"
+      onclick="document.getElementById('id1').style.color = 'green'"
+    >
+      Click me
+    </button>
+
     <script src="app.js">
       document.getElementById("teste").innerHTML = "Hello World.";
       document.getElementById("demo").innerHTML = "Date : " + Date();
       document.write(Date());
-      
     </script>
   </body>
 </html>
