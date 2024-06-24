@@ -42,6 +42,9 @@
     <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
 
     <button onclick="displayDate()">Try it</button>
+    <button id="myBtn">Try again</button>
+
+    <input type="text" id="fname" oninput="upperCase()" />
 
     <script src="app.js">
         document.getElementById("teste").innerHTML = "Hello World.";
@@ -67,6 +70,16 @@
       function changeText(id) {
         id.innerHTML = "Ooops!"
       }
+
+      function upperCase() {
+        const x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+      }
+
+      changeText(myBtn)
+      upperCase()
+
+      document.getElementById("myBtn").onclick = displayDate
     </script>
   </body>
 </html>
