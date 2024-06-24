@@ -21,6 +21,14 @@
       Mouse Over me
     </div>
 
+    <div
+      onmousedown="mDown(this)"
+      onmouseup="mUp(this)"
+      style="background-color: red; width: 120px; height: 20px; padding: 40px"
+    >
+      Click me
+    </div>
+
     <script>
       function mOver(obj) {
         obj.innerHTML = "Thank you";
@@ -28,6 +36,16 @@
 
       function mOut(obj) {
         obj.innerHTML = "Mouse Over Me";
+      }
+
+      function mDown(obj) {
+        obj.innerHTML = "Release me";
+        obj.style.backgroundColor = "blue";
+      }
+
+      function mUp(obj) {
+        obj.innerHTML = "Thank you";
+        obj.style.backgroundColor = "red";
       }
     </script>
   </body>
