@@ -5,6 +5,11 @@ const child = document.getElementById("p1");
 const child2 = document.getElementById("p2");
 const creating2 = document.createElement("h2");
 const childCreating2 = document.createTextNode("Keep going");
+const myCollection = document.getElementsByTagName("p");
+
+for (let i = 0; i < myCollection.length; i++) {
+  myCollection[i].style.color = "green";
+}
 
 creating1.appendChild(node);
 element.appendChild(creating1);
