@@ -48,3 +48,18 @@ for (let [fruit, amount] of Object.entries(fruits)) {
 
 const frutas = { Bananas: 300, Oranges: 200, Apples: 800 };
 const myMap = new Map(Object.entries(frutas));
+
+const moreFruits = [
+  { name: "apples", quantity: 300 },
+  { name: "bananas", quantity: 500 },
+  { name: "oranges", quantity: 200 },
+  { name: "kiwi", quantity: 150 },
+];
+
+function myCallbaack({ quantity }) {
+  return quantity > 200 ? "ok" : "low";
+}
+
+// Group by quantity
+
+const result = Object.groupBy(fruits, myCallbaack);
