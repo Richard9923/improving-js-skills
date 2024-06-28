@@ -52,8 +52,11 @@ async function myDisplayThree() {
       resolve("up!");
     }, 5000);
   });
-  document.getElementById("demo").innerHTML = await myPromiseThree;
+  document.ge;
+
+  tElementById("demo").innerHTML = await myPromiseThree;
 }
+
 myDisplay();
 myDisplayTwo();
 myDisplayThree();
