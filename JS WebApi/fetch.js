@@ -1,7 +1,7 @@
-const demo = document.getElementById("demo");
-getText("fetch_info.txt");
+infoFetch("fetch_info.txt");
+
 async function infoFetch(info) {
-  let myObjct = await fetch(file);
+  let myObjct = await fetch(info);
   let myText = await myObjct.text();
-  demo.innerHTML = myText;
+  document.getElementById("demo").innerHTML = myText;
 }
