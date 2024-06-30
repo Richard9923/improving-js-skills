@@ -22,3 +22,7 @@ function myFunction() {
     document.getElementById("demo").innerHTML = inpObj.validationMessage;
   }
 }
+
+function goBack() {
+  window.history.back();
+}
