@@ -30,6 +30,10 @@ Object.defineProperty(obj, "subtract", {
   },
 });
 
+Object.preventExtensions(obj);
+console.log(obj);
+obj.nacionalidade = "English";
+
 obj.reset;
 obj.add = 5;
 obj.subtyract = 1;
