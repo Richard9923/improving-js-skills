@@ -48,3 +48,13 @@ function timedCount() {
 }
 
 timedCount();
+
+if (typeof w == "undefined") {
+  w = new Worker("app.js");
+}
+
+w.onmessage = function (event) {
+  document.getElementById("result").innerHTML = event.data;
+};
+
+w.terminate();
