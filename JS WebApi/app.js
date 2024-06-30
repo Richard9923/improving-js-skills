@@ -1,4 +1,5 @@
 const myElement = document.getElementById("demo");
+const demostrac = document.getElementById("teste");
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -26,3 +27,14 @@ function myFunction() {
 function goBack() {
   window.history.back();
 }
+
+function goBackTwo() {
+  window.history.go(-2);
+}
+
+localStorage.setItem("name", "John Doe");
+localStorage.setItem("age", 25);
+
+demostrac.innerHTML = localStorage.getItem("name");
+demostrac.innerHTML = localStorage.getItem("age");
+console.log(localStorage.key);
