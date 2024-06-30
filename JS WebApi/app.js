@@ -38,3 +38,13 @@ localStorage.setItem("age", 25);
 demostrac.innerHTML = localStorage.getItem("name");
 demostrac.innerHTML = localStorage.getItem("age");
 console.log(localStorage.key);
+
+let i = 0;
+
+function timedCount() {
+  i++;
+  postMessage(i);
+  setTimeout("timedCount()", 500);
+}
+
+timedCount();
