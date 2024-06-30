@@ -42,3 +42,17 @@ obj.decrement;
 obj.reset;
 obj.increment;
 document.getElementById("demo").innerHTML = obj.counter;
+
+const fruits = ["Bananas", "Orange", "Apple", "Mango"];
+
+console.log(fruits);
+fruits.push("Kiwi");
+console.log(fruits);
+let answerFirst = Object.isExtensible(fruits);
+console.log(answerFirst);
+
+const people = { firstName: "John", lastName: "Doe" };
+Object.preventExtensions(people);
+
+let answer = Object.isExtensible(people);
+console.log(answer);
