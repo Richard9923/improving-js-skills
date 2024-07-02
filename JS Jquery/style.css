@@ -1,3 +1,14 @@
 #menu-toggle {
   width: 20px;
 }
+
+.content-box {
+  background-color: blue;
+  color: white;
+  width: 300px;
+  height: 300px;
+}
+
+.content-after {
+  display: none;
+}
