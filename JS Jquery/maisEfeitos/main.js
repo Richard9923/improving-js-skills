@@ -4,14 +4,13 @@ $(document).ready(function () {
       {
         width: "500px",
         height: "400px",
-      },
-      3000
-    );
-    $(".content-box").animate(
-      {
-        fontSize: "30px",
-      },
-      3000
-    );
+      }, 3000).animate({
+        fontSize: '30px'
+    }, 3000).fadeOut();
   });
+  
+    $("button").click(function () {
+        $(".content-box").stop(true, true);
+    })
 });
+
