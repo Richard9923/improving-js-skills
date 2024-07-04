@@ -1,7 +1,7 @@
 
 const apiKey = 'OxYbdNDyahk6Yff8McT5QyT9NXwzcKgpQatfCScf';
 const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
-const apiUrlTwo = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${apiKey}`
+
 
 fetch(apiUrl)
     .then(response => response.json())
@@ -14,12 +14,16 @@ fetch(apiUrl)
     .catch(error => console.log('Error', error));
 
 
-fetch(apiUrlTwo)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        document.getElementById("image2").src = data.photos[0].img_src;
-        document.getElementById("hover").innerText = data.photos[0].rover.name;
-        
+$(document).ready(function () {
+    $("#infoBtn").click(function () {
+        $("#explanation").fadeIn();
+        $("#closeBtn").show();
+        $("#infoBtn").hide();
+        $("#closeBtn").click(function () {
+            $("#explanation").fadeOut();
+            $("#infoBtn").show();
+            $("#closeBtn").hide();
+
+        })
     })
-    .catch(error => console.log('Error', error));
+}); 
