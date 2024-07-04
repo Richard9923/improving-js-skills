@@ -17,13 +17,19 @@ fetch(apiUrl)
 $(document).ready(function () {
     $("#infoBtn").click(function () {
         $("#explanation").fadeIn();
+        $('html, body').animate({
+            scrollTop: $("#explanation").offset().top
+        }, 1000);
         $("#closeBtn").show();
         $("#infoBtn").hide();
         $("#closeBtn").click(function () {
             $("#explanation").fadeOut();
             $("#infoBtn").show();
             $("#closeBtn").hide();
+            
 
         })
     })
+
+    
 }); 

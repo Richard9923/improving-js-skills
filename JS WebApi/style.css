@@ -27,12 +27,12 @@ body {
 
 #explanation{
     display: none;
+    padding-bottom: 10%;
 }
 #button-content {
     display: flex;
     justify-content: space-evenly;
     width: 50%;
-    height: 50%;
 }
 
 #closeBtn {
@@ -41,8 +41,8 @@ body {
 
 
 #infoBtn, #closeBtn {
-    padding: 3%;
-    width: 30%;
+    padding: 10px;
+    width: 20%;
     border: none;
     border-radius: 7%;
     background-color: lightgreen;
