@@ -10,8 +10,6 @@ fetch(apiUrl)
         document.getElementById("title").innerText = data.title;
         document.getElementById("image").src = data.url;
         document.getElementById("explanation").innerText = data.explanation;
-        
-
     })
     .catch(error => console.log('Error', error));
 
@@ -23,7 +21,5 @@ fetch(apiUrlTwo)
         document.getElementById("image2").src = data.photos[0].img_src;
         document.getElementById("hover").innerText = data.photos[0].rover.name;
         
-    
-
     })
     .catch(error => console.log('Error', error));
